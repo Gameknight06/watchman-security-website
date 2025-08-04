@@ -3,7 +3,7 @@
 
 export const HeroSection = () => {
     return (
-        <section id={"hero"} className="min-h-156 relative flex flex-col items-center justify-center mt-50">
+        <section id={"hero"} className="min-h-156 relative flex flex-col items-center justify-center md:mt-50 mt-30">
                 <div className={"container max-w-5xl mx-auto relative z-10"}>
                     <div className={"space-y-6"}>
                         <h1 className={"text-4xl md:text-6xl font-bold -tracking-tight"}>
