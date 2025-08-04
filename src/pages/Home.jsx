@@ -4,6 +4,7 @@ import {Footer} from "../components/Footer.jsx";
 import {PaymentSection} from "../components/PaymentSection.jsx";
 import {TroubleshootingSection} from "../components/TroubleshootingSection.jsx";
 import {AboutSection} from "../components/AboutSection.jsx";
+import {MessageSection} from "../components/MessageSection.jsx";
 
 
 export const Home = () => {
@@ -15,6 +16,9 @@ export const Home = () => {
                 <HeroSection/>
 
                 <AboutSection/>
+
+                <MessageSection/>
+
 
                 <PaymentSection/>
 

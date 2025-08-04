@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 const navItems = [
     {name: "Home", href: "#hero"},
     {name: "About", href: "#about"},
-    {name: "Contact", href: "#contact"},
+    {name: "Contact", href: "#message"},
     {name: "Payment", href: "#payment"},
 ]
 
@@ -17,7 +17,8 @@ export const Navbar = () => {
         <nav className={"fixed w-full z-40 transition-all duration-300 py-3 bg-background border-b-1 border-b-gray-600"}>
             <div className={"container flex items-center justify-between"}>
                 <a href={"#hero"} className={"text-2xl font-bold text-primary flex items-center"}>
-                    <span className={"relative z-10  logo-text"}>
+                    <img src={"/WatchmanSecurityLogo.svg"} alt={"Watchman Security Logo"} className={"w-15"}/>
+                    <span className={"relative z-10 text-primary"}>
                         <span> Watchman </span> Security
                     </span>
                 </a>

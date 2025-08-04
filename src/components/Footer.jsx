@@ -4,7 +4,7 @@ import {ContactSection} from "./ContactSection.jsx";
 
 export const Footer = () => {
 
-    return <footer className="py-12 px-6 bg-card relative border-t border-border mt-6 pt-8 flex flex-wrap justify-center items-center gap-8">
+    return <footer className="py-12 px-6 bg-card relative border-t border-border mt-35 pt-8 flex flex-wrap justify-center items-center gap-8">
         <div className={"flex flex-col items-center justify-center gap-8 w-full"}>
             <div>
                 <ContactSection/>
