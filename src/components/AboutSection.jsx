@@ -3,8 +3,7 @@
 export const AboutSection = () => {
   return (
     <section className={"min-h-200 relative flex flex-col items-center justify-center mt-25"}>
-            <div className={"container mx-auto min-w-95 md:min-w-300 md:min-h-150"}>
-                <div className={"py-2 pb-16 px-15 text-center m-6 bg-background rounded-3xl shadow-xs mt-15 mx-auto animate-fade-in-delay-2"}>
+            <div className={"container mx-auto max-w-95 md:min-w-300 md:min-h-150 py-2 pb-16 px-15 text-center m-6 bg-background rounded-3xl shadow-xs mt-15 mx-auto animate-fade-in-delay-2"}>
                     <div className={"gap-8 md:py-16 text-center flex flex-col items-center justify-center m-6"}>
                         <h1 className={"text-4xl md:text-5xl font-bold -tracking-tight"}>
                             About Us
@@ -44,7 +43,6 @@ export const AboutSection = () => {
                             </p>
                         </div>
                     </div>
-                </div>
             </div>
     </section>
   );

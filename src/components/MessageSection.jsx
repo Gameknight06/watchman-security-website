@@ -10,7 +10,7 @@ export const MessageSection = () => {
         setResult("Sending....");
         const formData = new FormData(event.target);
 
-        formData.append("access_key", "0e038e6d-92c6-41e6-90f1-c6f415be3830");
+        formData.append("access_key", "6f0ef7f9-3f7c-4b4d-9129-4bb9a8208efc");
 
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
@@ -42,7 +42,7 @@ export const MessageSection = () => {
                       You may also go to the bottom of the site to find our contact info.
                   </h3>
               </div>
-              <form className="space-y-6 min-w-full md:min-w-1/3 gap-5 mx-auto">
+              <form className="mt-10 space-y-6 min-w-full md:min-w-1/3 gap-5 mx-auto">
                   <div>
                       <label htmlFor="name" className="block text-sm font-medium mb-2"> Your Name</label>
                       <input
