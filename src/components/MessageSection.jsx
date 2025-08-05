@@ -1,4 +1,4 @@
-import {SendIcon} from "lucide-react";
+import {ArrowDown, ArrowDownAZ, SendIcon} from "lucide-react";
 import React from "react";
 import {cn} from "../lib/utils.js";
 
@@ -29,22 +29,20 @@ export const MessageSection = () => {
     }
 
     return (
-      <section className={"min-h-200 relative flex flex-col items-center justify-center mt-20 md:mb-0 mb-30"} id={"message"}>
-          <div className="bg-background p-16 flex md:flex-row flex-col items-center justify-between gap-10 max-w-95 md:max-w-6xl md:min-w-335 mx-auto rounded-3xl shadow-xs mt-15" onSubmit={onSubmit}>
-              <div className={"text-center md:mb-10 flex flex-col items-center justify-center"}>
+      <section className={"min-h-200 relative flex flex-col items-center justify-center mt-25"} id={"message"}>
+          <div className="bg-background p-8 md:p-16 grid grid-cols-1 md:grid-cols-2 items-center justify-between gap-8 max-w-95 md:max-w-6xl md:min-w-335 mx-auto rounded-3xl shadow-xs mt-15">
+              <div className={"text-center flex flex-col align-text-top gap-8"}>
                   <h1 className={"text-3xl md:text-5xl font-bold -tracking-tight"}>
                       Send Us a Message
                   </h1>
                   <h3 className={"text-sm md:text-lg font-bold mt-12 max-w-xl"}>
                       Enter your information and a message and click the send message button to get in contact with us.
                   </h3>
-                  <h3 className={"text-sm md:text-lg font-bold mt-12 max-w-xl"}>
-                      You may also go to the bottom of the site to find our contact info.
-                  </h3>
               </div>
-              <form className="mt-10 space-y-6 min-w-full md:min-w-1/3 gap-5 mx-auto">
+
+              <form className="space-y-6 w-full md:row-start-1 md:col-start-2 md:row-span-2 md:mt-15 md:border-l-2 md:border-black md:pl-12" onSubmit={onSubmit}>
                   <div>
-                      <label htmlFor="name" className="block text-sm font-medium mb-2"> Your Name</label>
+                      <label htmlFor="name" className="block text-sm font-medium mb-2 text-left"> Your Name</label>
                       <input
                           type="text"
                           id="name"
@@ -56,7 +54,7 @@ export const MessageSection = () => {
                   </div>
 
                   <div>
-                      <label htmlFor="email" className="block text-sm font-medium mb-2"> Your Email</label>
+                      <label htmlFor="email" className="block text-sm font-medium mb-2 text-left"> Your Email</label>
                       <input
                           type="email"
                           id="email"
@@ -68,17 +66,18 @@ export const MessageSection = () => {
                   </div>
 
                   <div>
-                      <label htmlFor="message" className="block text-sm font-medium mb-2"> Your Message</label>
+                      <label htmlFor="message" className="block text-sm font-medium mb-2 text-left"> Your Message</label>
                       <textarea
                           id="message"
                           name="message"
                           required
+                          rows={4}
                           className="w-full px-4 py-3 rounded-md border border-input bg-gray-300 focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
                           placeholder="Hello, I'd like to get in touch with you about ..."
                       />
                   </div>
 
-                  <button type="sumbit" className={cn("animated-button mx-auto",
+                  <button type="submit" className={cn("animated-button mx-auto mt-10 shadow-2xl",
                   )}
                   >
                       <svg viewBox="0 0 24 24" className="arr-2" xmlns="http://www.w3.org/2000/svg">
@@ -95,7 +94,15 @@ export const MessageSection = () => {
                       </svg>
                   </button>
               </form>
-              <div className="text-center mt-5 text-muted-foreground cursor-default">
+              <div className={"text-center text-muted-foreground cursor-default flex flex-col items-center justify-center gap-16 md:mt-0 mt-16"}>
+                  <h3 className={"text-sm md:text-lg font-bold max-w-xl"}>
+                      You may also go to the bottom of the site to find our contact info.
+                  </h3>
+                  <a href={"#contact"} className={"text-center "}>
+                      <ArrowDown size={24}/>
+                  </a>
+              </div>
+              <div className="text-center text-muted-foreground cursor-default md:col-span-2">
                   {result}
               </div>
           </div>

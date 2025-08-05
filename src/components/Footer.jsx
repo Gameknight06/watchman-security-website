@@ -9,7 +9,7 @@ export const Footer = () => {
             <div>
                 <ContactSection/>
             </div>
-            <div className={"w-full flex items-center justify-between gap-4"}>
+            <div className={"w-full flex items-center justify-between gap-4 md:px-15"}>
                 <img src={"/WatchmanSecurityLogo.svg"} alt={"Watchman Security Logo"} className={"w-24"}
                      draggable={false}/>
 

@@ -2,7 +2,7 @@
 
 export const TroubleshootingSection = () => {
   return (
-    <section className={"min-h-156 relative flex flex-col items-center justify-center"}>
+    <section className={"min-h-156 relative flex flex-col items-center justify-center mt-25"}>
         <div className={"container mx-auto max-w-95 md:max-w-6xl flex flex-col md:flex-row md:gap-25 bg-background rounded-3xl shadow-xs mt-15 md:min-w-335 md:min-h-150 animate-fade-in items-center justify-center"}>
             <div className={"md:gap-8 md:py-16 text-center flex flex-col items-center justify-center m-6"}>
                 <h1 className={"text-3xl md:text-5xl font-bold -tracking-tight"}>
