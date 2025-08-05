@@ -17,13 +17,13 @@ export const TroubleshootingSection = () => {
                             <img src={"/public/AlarmPanel.jpg"} alt={"Alarm Panel"}
                                  className={"w-full h-full object-cover"}/>
                         </div>
-                        <a href={"/public/WatchmanSecurityLogo.svg"} className={"buttonDownload w-40 md:size-2/3 rounded-xl shadow-2xl"}>
+                        <a href={"/WatchmanSecurityLogo.svg"} className={"buttonDownload w-40 md:size-2/3 rounded-xl shadow-2xl"}>
                             <span className={"text-xs md:text-2xl"}>Download</span>
                         </a>
                     </div>
                     <div className={"flex flex-col items-center justify-center gap-3"}>
                         <div className={"w-80 h-80 rounded-xl border-2 overflow-hidden bg-card"}>
-                            <img src={"/public/AlarmKeypad.jpg"} alt={"Alarm Panel"}
+                            <img src={"/AlarmKeypad.jpg"} alt={"Alarm Panel"}
                                  className={"w-full h-full object-cover"}/>
                         </div>
                         <a href={"/public/WatchmanSecurityLogo.svg"} className={"buttonDownload w-40 md:size-2/3 rounded-xl shadow-2xl"}>
@@ -35,7 +35,7 @@ export const TroubleshootingSection = () => {
                             <img src={"/public/OtherKeypad.jpg"} alt={"Alarm Panel"}
                                  className={"w-full h-full object-cover"}/>
                         </div>
-                        <a href={"/public/WatchmanSecurityLogo.svg"} className={"buttonDownload w-40 md:size-2/3 rounded-xl shadow-2xl"}>
+                        <a href={"/WatchmanSecurityLogo.svg"} className={"buttonDownload w-40 md:size-2/3 rounded-xl shadow-2xl"}>
                             <span className={"text-xs md:text-2xl"}>Download</span>
                         </a>
                     </div>

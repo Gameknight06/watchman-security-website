@@ -16,9 +16,9 @@ export const PaymentSection = () => {
                             </p>
                         </div>
                         <div className={"flex flex-col items-center justify-center gap-8 max-w-2xl md:mt-0 mt-10"}>
-                            <img src={"/public/InvoiceExample.png"} alt={"Email Name Image"} className={"w-100 md:w-150 border-2"}/>
+                            <img src={"/InvoiceExample.png"} alt={"Email Name Image"} className={"w-100 md:w-150 border-2"}/>
                             <ArrowDown/>
-                            <img src={"/public/PayLinkExample.png"} alt={"Email Name Image"} className={"w-100 md:w-150 border-2"}/>
+                            <img src={"/PayLinkExample.png"} alt={"Email Name Image"} className={"w-100 md:w-150 border-2"}/>
                         </div>
                     </div>
                 </div>
