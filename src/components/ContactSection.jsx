@@ -4,7 +4,7 @@ export const ContactSection = () => {
     return (
         <section id={"contact"} className={"min-h-3/4 min-w-screen relative flex flex-col items-center justify-center px-4"}>
             <div className={"container mx-auto max-w-5xl md:gap-16 grid grid-cols-1 md:grid-cols-2 border-b-1 border-t-1 border-primary items-center justify-center"}>
-                <div className={"gap-8 md:py-12 text-left flex flex-col justify-center m-2"}>
+                <div className={"gap-8 py-12 text-left flex flex-col justify-center m-2"}>
                     <h1 className={"text-3xl md:text-5xl font-bold -tracking-tight"}>
                         Contact Us
                     </h1>
