@@ -46,7 +46,7 @@ export const MessageSection = () => {
                   <h3
                       ref = {h2Ref}
                       className={`text-sm md:text-lg font-bold mt-12 max-w-xl opacity-0 ${isH2Visible ? 'animate-fade-in-down md:animate-fade-in-left' : ''}`}>
-                      Enter your information and a message and click the send message button to get in contact with us.
+                      If you are interested in a new alarm or camera system, please fill out the form and send us a message.
                   </h3>
               </div>
 

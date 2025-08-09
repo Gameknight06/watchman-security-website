@@ -6,13 +6,13 @@ export const HeroSection = () => {
         <section id={"hero"} className="min-h-156 relative flex flex-col items-center justify-center md:mt-30 mt-30">
                 <div className={"container max-w-5xl mx-auto relative z-10"}>
                     <div className={"space-y-6"}>
-                        <h1 className={"text-4xl md:text-6xl font-bold -tracking-tight"}>
+                        <h1 className={"text-3xl md:text-7xl font-bold -tracking-tight"}>
                             <span className="text-primary opacity-0 animate-fade-in-delay-1"> Watchman</span>
-                            <span className="text-primary opacity-0 animate-fade-in-delay-2"> Security</span>
+                            <span className="text-primary opacity-0 animate-fade-in-delay-2"> Security LLC</span>
                         </h1>
 
-                        <p className={"text-lg md:text-xl text-center font-semibold max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3"}>
-                            Alarm monitoring and technical support for your home or business.
+                        <p className={"text-sm md:text-2xl text-center font-semibold max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3"}>
+                            Security installation and service for your home or business
                         </p>
                     </div>
                 </div>

@@ -21,8 +21,8 @@ export const ContactSection = () => {
                 <div className={"gap-2 md:gap-8 py-12 text-left flex flex-col justify-center m-2"}>
                     <h2 className={"text-sm md:text-xl font-bold mt-8"}>
                         <span>Email us: </span>
-                        <a href="mailto:watchmansecurityllc@gmail.com" className="text-muted-foreground hover:text-primary transition-colors underline">
-                            WatchmanSecurityLLC@gmail.com
+                        <a href="mailto:info@watchmansecurityllc.com" className="text-muted-foreground hover:text-primary transition-colors underline">
+                            Info@watchmansecurityllc.com
                         </a>
                     </h2>
                     <h2 className={"text-sm md:text-xl font-bold"}>

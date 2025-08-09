@@ -13,7 +13,7 @@ export const AboutSection = () => {
                     <div className={"gap-2 md:gap-8 md:py-16 text-center flex flex-col items-center justify-center m-6"}>
                         <h1
                             ref = {h1Ref}
-                            className={`text-4xl md:text-5xl font-bold -tracking-tight opacity-0 ${isH1Visible ? 'animate-fade-in-down' : ''}`}>
+                            className={`text-3xl md:text-5xl font-bold -tracking-tight opacity-0 ${isH1Visible ? 'animate-fade-in-down' : ''}`}>
                             About Us
                         </h1>
                     </div>
@@ -31,11 +31,11 @@ export const AboutSection = () => {
                             ref = {rightRef}
                             className={`text-wrap max-w-2xl mx-auto flex flex-col md:gap-5 opacity-0 ${isRightVisible ? 'animate-fade-in-up md:animate-fade-in-right' : ''}`}>
                             <h2 className={"text-lg md:text-2xl font-bold"}>
-                                Proudly based in Oklahoma and installing Alarm systems and devices in both residential
+                                Proudly based in Oklahoma and installing Alarm and camera systems and devices in both residential
                                 and commercial locations.
                             </h2>
                             <p className={"text-sm md:text-xl text-center font-semibold mt-12 max-w-2xl mx-auto"}>
-                                Founded in 2004 and proudly based in Oklahoma, Watchman Security has been a trusted name
+                                Founded in 2007 and proudly based in Oklahoma, Watchman Security has been a trusted name
                                 in advanced security solutions for over two decades. We specialize in professional
                                 installation and 24/7 monitoring services for both residential and commercial clients,
                                 delivering peace of mind with every system we deploy.

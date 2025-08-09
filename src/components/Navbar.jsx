@@ -19,7 +19,7 @@ export const Navbar = () => {
                 <a href={"#hero"} className={"text-2xl font-bold text-primary flex items-center"}>
                     <img src={"/WatchmanSecurityLogo.svg"} alt={"Watchman Security Logo"} className={"w-15"}/>
                     <span className={"relative z-10 text-primary"}>
-                        <span> Watchman </span> Security
+                        <span> Watchman </span> Security LLC
                     </span>
                 </a>
 
