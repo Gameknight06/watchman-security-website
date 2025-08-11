@@ -21,9 +21,7 @@ export const MessageSection = () => {
 
         const formData = new FormData(event.target);
 
-        //formData.append("access_key", "6f0ef7f9-3f7c-4b4d-9129-4bb9a8208efc");
-        formData.append("access_key", "0e038e6d-92c6-41e6-90f1-c6f415be3830");
-
+        formData.append("access_key", "6f0ef7f9-3f7c-4b4d-9129-4bb9a8208efc");
 
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
