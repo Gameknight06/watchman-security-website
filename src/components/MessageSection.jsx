@@ -2,9 +2,13 @@ import {ArrowDown, ArrowDownAZ, SendIcon} from "lucide-react";
 import React from "react";
 import {cn} from "../lib/utils.js";
 import {useIntersectionObserver} from "../hooks/useIntersectionObserver.js";
+import {ResultModal} from "./ResultModal.jsx";
 
 export const MessageSection = () => {
-    const [result, setResult] = React.useState("");
+    const [isSubmitting, setIsSubmitting] = React.useState(false);
+    const [isModalOpen, setIsModalOpen] = React.useState(false);
+    const [modalData, setModalData] = React.useState({ title: "", message: "", isSuccess: false });
+
     const [h1Ref, isH1Visible] = useIntersectionObserver({ threshold: 0.5 });
     const [h2Ref, isH2Visible] = useIntersectionObserver({ threshold: 0.5 });
     const [h3Ref, isH3Visible] = useIntersectionObserver({ threshold: 0.2 });
@@ -13,28 +17,51 @@ export const MessageSection = () => {
 
     const onSubmit = async (event) => {
         event.preventDefault();
-        setResult("Sending....");
+        setIsSubmitting(true)
+
         const formData = new FormData(event.target);
 
-        formData.append("access_key", "6f0ef7f9-3f7c-4b4d-9129-4bb9a8208efc");
+        //formData.append("access_key", "6f0ef7f9-3f7c-4b4d-9129-4bb9a8208efc");
+        formData.append("access_key", "0e038e6d-92c6-41e6-90f1-c6f415be3830");
 
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        });
 
-        const data = await response.json();
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+            const data = await response.json();
 
-        if (data.success) {
-            setResult("Thank you for your message! We will get back to you as soon as possible.");
-            event.target.reset();
-        } else {
-            console.log("Error", data);
-            setResult(data.message);
+            if (data.success) {
+                setModalData({
+                    title: "Message Sent!",
+                    message: "Thank you for your message! We will get back to you as soon as possible.",
+                    isSuccess: true
+                });
+                event.target.reset();
+            } else {
+                console.log("Error", data);
+                setModalData({
+                    title: "Submission Error",
+                    message: data.message || "An unexpected error occurred. Please try again.",
+                    isSuccess: false
+                });
+            }
+        } catch (error) {
+            console.error("Fetch Error:", error);
+            setModalData({
+                title: "Network Error",
+                message: "Could not send the message. Please check your connection and try again.",
+                isSuccess: false
+            });
+        } finally {
+            setIsSubmitting(false);
+            setIsModalOpen(true);
         }
     }
 
     return (
+        <>
       <section className={"min-h-200 relative flex flex-col items-center justify-center mt-25"} id={"message"}>
           <div className="bg-background p-8 md:p-16 grid grid-cols-1 md:grid-cols-2 items-center justify-between gap-8 max-w-95 md:max-w-6xl md:min-w-335 mx-auto rounded-3xl shadow-xs mt-15">
               <div className={"text-center flex flex-col align-text-top gap-8"}>
@@ -89,8 +116,9 @@ export const MessageSection = () => {
                       />
                   </div>
 
-                  <button type="submit" className={cn("animated-button mx-auto mt-10 shadow-2xl",
-                  )}
+                  <button type="submit"
+                          className={cn("animated-button mx-auto mt-10 shadow-2xl", { "opacity-70 cursor-not-allowed": isSubmitting })}
+                          disabled={isSubmitting}
                   >
                       <svg viewBox="0 0 24 24" className="arr-2" xmlns="http://www.w3.org/2000/svg">
                           <path
@@ -116,10 +144,16 @@ export const MessageSection = () => {
                       <ArrowDown size={24}/>
                   </a>
               </div>
-              <div className="text-center text-muted-foreground cursor-default md:col-span-2">
-                  {result}
-              </div>
           </div>
       </section>
+
+            <ResultModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                title={modalData.title}
+                message={modalData.message}
+                isSuccess={modalData.isSuccess}
+            />
+        </>
     );
 };

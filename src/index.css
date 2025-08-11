@@ -1,13 +1,5 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "Impact";
-  src: url("/public/fonts/ImpactLTStd.woff2") format("woff2");
-  font-weight: normal;
-  font-style: auto;
-  font-display: swap;
-}
-
 @theme {
   --color-border: hsl(var(--border));
   --color-background: hsl(var(--background));
@@ -200,247 +192,6 @@
 }
 
 @layer components {
-  .btn-animated {
-    @apply inline-block rounded-full no-underline text-center;
-    @apply px-8 py-2 text-lg font-sans tracking-[2px];
-    @apply relative overflow-hidden;
-    @apply transition-colors duration-300;
-    @apply bg-transparent text-foreground text-2xl;
-  }
-
-  .btn-animated span {
-    @apply relative z-10;
-  }
-
-  .btn-animated::after {
-    @apply absolute top-0 left-0 z-0 block h-full w-0 content-[''];
-    @apply bg-primary;
-    @apply transition-all duration-300;
-  }
-
-  .btn-animated:hover {
-    @apply text-primary-foreground;
-  }
-
-  .btn-animated:hover::after {
-    @apply w-full;
-  }
-
-  .btn-qb {
-    display: inline-block;
-    padding: 12px 24px;
-    border: 1px solid #4f4f4f;
-    border-radius: 4px;
-    transition: all 0.2s ease-in;
-    position: relative;
-    overflow: hidden;
-    font-size: 19px;
-    cursor: pointer;
-    color: black;
-    z-index: 1;
-  }
-
-  .btn-qb:before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%) scaleY(1) scaleX(1.25);
-    top: 100%;
-    width: 140%;
-    height: 180%;
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 50%;
-    display: block;
-    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
-    z-index: -1;
-  }
-
-  .btn-qb:after {
-    content: "";
-    position: absolute;
-    left: 55%;
-    transform: translateX(-50%) scaleY(1) scaleX(1.45);
-    top: 180%;
-    width: 160%;
-    height: 190%;
-    background-color: #3bd85e;
-    border-radius: 50%;
-    display: block;
-    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
-    z-index: -1;
-  }
-
-  .btn-qb:hover {
-    color: #ffffff;
-    border: 1px solid #3bd85e;
-  }
-
-  .btn-qb:hover:before {
-    top: -35%;
-    background-color: #3bd85e;
-    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
-  }
-
-  .btn-qb:hover:after {
-    top: -45%;
-    background-color: #3bd85e;
-    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
-  }
-
-  .logo-text {
-    -webkit-text-stroke: 0.01ch black;
-    text-stroke: 0.01ch black;
-    text-shadow: 1px 1px 0 #000;
-    letter-spacing: 1px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  }
-
-  .btn-nm {
-    display: inline-block;
-    padding: 12px 24px;
-    border: 0.5mm solid #4f4f4f;
-    border-radius: 4px;
-    transition: all 0.2s ease-in;
-    position: relative;
-    overflow: hidden;
-    font-size: 19px;
-    cursor: pointer;
-    color: black;
-    z-index: 1;
-  }
-
-  .btn-nm:before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%) scaleY(1) scaleX(1.25);
-    top: 100%;
-    width: 140%;
-    height: 180%;
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 50%;
-    display: block;
-    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
-    z-index: -1;
-  }
-
-  .btn-nm:after {
-    content: "";
-    position: absolute;
-    left: 55%;
-    transform: translateX(-50%) scaleY(1) scaleX(1.45);
-    top: 180%;
-    width: 160%;
-    height: 190%;
-    background-color: #0076fe;
-    border-radius: 50%;
-    display: block;
-    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
-    z-index: -1;
-  }
-
-  .btn-nm:hover {
-    color: #ffffff;
-    border: 1px solid #0076fe;
-  }
-
-  .btn-nm:hover:before {
-    top: -35%;
-    background-color: #0076fe;
-    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
-  }
-
-  .btn-nm:hover:after {
-    top: -45%;
-    background-color: #0076fe;
-    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
-  }
-
-  .buttonDownload {
-    display: inline-block;
-    position: relative;
-    padding: 10px 25px;
-    background-color: #d1d5dc;
-    color: black;
-    font-family: sans-serif;
-    text-decoration: none;
-    font-size: 0.9em;
-    text-align: center;
-    text-indent: 15px;
-    border: none;
-  }
-
-  .buttonDownload:hover {
-    background-color: #45a21a;
-    color: white;
-  }
-
-  .buttonDownload:before, .buttonDownload:after {
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 15px;
-    top: 52%;
-  }
-
-  .buttonDownload:before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 15px;
-    top: 52%;
-    width: 10px;
-    height: 2px;
-    border-style: solid;
-    border-width: 0 2px 2px;
-    border-color: inherit;
-    transition: border-color 0.2s ease-in;
-  }
-
-  .buttonDownload:after {
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 16px;
-    top: 52%;
-    width: 0;
-    height: 0;
-    margin-top: -7px;
-    border-style: solid;
-    border-width: 4px 4px 0 4px;
-    border-color: transparent;
-    border-top-color: inherit;
-    transition: border-color 0.2s ease-in;
-  }
-
-  .buttonDownload:hover:before {
-    border-color: #cdefbd;
-  }
-
-  .buttonDownload:hover:after {
-    animation: downloadArrow 0.6s normal infinite;
-  }
-
-  @keyframes downloadArrow {
-    0% {
-      margin-top: -7px;
-      opacity: 1;
-    }
-
-    0.001% {
-      margin-top: -15px;
-      opacity: 0.4;
-    }
-
-    50% {
-      opacity: 1;
-    }
-
-    100% {
-      margin-top: 0;
-      opacity: 0.4;
-    }
-  }
 
   .animated-button {
     position: relative;
@@ -496,37 +247,42 @@
     transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
-  .animated-button:hover {
-    box-shadow: 0 0 0 12px transparent;
-    color: #ffffff;
-    border-radius: 12px;
-  }
-
-  .animated-button:hover .arr-1 {
-    right: -25%;
-  }
-
-  .animated-button:hover .arr-2 {
-    left: 16px;
-  }
-
-  .animated-button:hover .text {
-    transform: translateX(12px);
-  }
-
-  .animated-button:hover svg {
-    fill: #ffffff;
-  }
-
   .animated-button:active {
-    scale: 0.95;
-    box-shadow: 0 0 0 4px greenyellow;
+    scale: 0.90;
+    box-shadow: 0 0 0 4px dodgerblue;
   }
 
-  .animated-button:hover .circle {
-    width: 220px;
-    height: 220px;
-    opacity: 1;
+  @media (hover: hover) and (pointer: fine) {
+    .animated-button:hover {
+    }
+
+    .animated-button:hover {
+      box-shadow: 0 0 0 12px transparent;
+      color: #ffffff;
+      border-radius: 12px;
+    }
+
+    .animated-button:hover .arr-1 {
+      right: -25%;
+    }
+
+    .animated-button:hover .arr-2 {
+      left: 16px;
+    }
+
+    .animated-button:hover .text {
+      transform: translateX(12px);
+    }
+
+    .animated-button:hover svg {
+      fill: #ffffff;
+    }
+
+    .animated-button:hover .circle {
+      width: 220px;
+      height: 220px;
+      opacity: 1;
+    }
   }
 
 }
